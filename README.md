@@ -1,12 +1,10 @@
-<a href="https://thepreservedbible.com/" title="Why the King James Bible?"><img src="https://i.ibb.co/svCrDys/The-Preserved-Bible-Small.jpg" width="300" align="right"></a>
-
-# kjv [![AUR](https://img.shields.io/badge/AUR-kjv--git-blue.svg)](https://aur.archlinux.org/packages/kjv-git/)
+# drv
 
 Read the Word of God from your terminal
 
 ## Usage
 
-    usage: kjv [flags] [reference...]
+    usage: drv [flags] [reference...]
 
     Flags:
       -A num  show num verses of context after matching verses
@@ -43,10 +41,10 @@ Read the Word of God from your terminal
 
 ## Build
 
-kjv can be built by cloning the repository and then running make:
+drv can be built by cloning the repository and then running make:
 
-    git clone https://github.com/layeh/kjv.git
-    cd kjv
+    git clone https://github.com/BryceVandegrift/drv.git
+    cd drv
     make
 
 ## License

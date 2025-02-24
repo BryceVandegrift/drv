@@ -1,3 +1,5 @@
-/kjv
+/drv
 *.o
-/data/kjv_data.c
+/data/drv_data.c
+/data/json-2-tsv.py
+/data/DRC.json
