@@ -1,3 +1,4 @@
+PREFIX = /usr/local
 OBJS = src/drv_main.o \
        src/drv_match.o \
        src/drv_ref.o \
@@ -28,6 +29,14 @@ data/drv_data.o: src/drv_data.h data/drv_data.c
 data/drv_data.c: data/drv.tsv data/generate.awk src/drv_data.h
 	awk -f data/generate.awk $< > $@
 
-.PHONY: clean
+.PHONY: clean install uninstall
 clean:
 	rm -rf $(OBJS) data/drv_data.c drv
+
+install: drv
+	mkdir -p $(DESTDIR)$(PREFIX)/bin
+	cp -f drv $(DESTDIR)$(PREFIX)/bin
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/drv
+
+uninstall:
+	rm -f $(DESTDIR)$(PREFIX)/bin/drv
